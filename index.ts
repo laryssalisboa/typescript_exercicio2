@@ -44,6 +44,20 @@ appDiv.innerHTML = `
 <h2>${notSure}</h2>
 `;
 
+function warnUser(): void {
+  console.log("This is my warning message");
+}
 
+let myfunction: void = warnUser();
 
+let unusable: void = undefined;
+unusable = null;
 
+myfunction;
+
+const appDiv: HTMLElement = document.getElementById('app');
+appDiv.innerHTML = `
+<h1>Void</h1>
+<h2>unusable: ${unusable}</h2>
+<h2>myfunction: ${myfunction}</h2>
+`;
