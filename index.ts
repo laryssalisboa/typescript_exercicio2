@@ -61,3 +61,16 @@ appDiv.innerHTML = `
 <h2>unusable: ${unusable}</h2>
 <h2>myfunction: ${myfunction}</h2>
 `;
+
+declare function create(o: object | null): void
+create({ prop: 0}); // OK
+create(null); //OK
+create(42); // ERRO
+create("string"); //ERRO
+create(false); //ERRO
+create(undefined); //ERRO
+
+const appDiv: HTMLElement = document.getElementById('app');
+appDiv.innerHTML = `
+<h1>Object</h1>
+`;
