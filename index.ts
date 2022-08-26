@@ -34,6 +34,15 @@ appDiv.innerHTML = `
 `;
 
 
+let notSure: any = 4;
+notSure = "Maybe I am a string";
+notSure = false; //okay, definitely a boolean
+
+const appDiv: HTMLElement = document.getElementById('app');
+appDiv.innerHTML = `
+<h1>Any variable</h1>
+<h2>${notSure}</h2>
+`;
 
 
 
